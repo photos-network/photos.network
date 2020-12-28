@@ -1,0 +1,29 @@
+{% import "partials/language.html" as lang with context %}
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class="md-footer-copyright center">
+                {% if config.copyright %}
+                <div class="md-footer-copyright__highlight">
+                    {{ config.copyright }}
+                </div>
+                {% endif %}
+            </div>
+            <div class="md-footer-social">
+                <a href="mailto:info@photos.network" target="_blank" rel="noopener" title="Contact (No support!)">
+                    Contact (No support!)
+                </a><br />
+                <a href="/security/" title="Security Vulnerabilities">
+                    Security Vulnerabilities
+                </a><br />
+                <a href="/privacy/" title="Privacy">
+                    Privacy
+                </a><br />
+                <a href="https://developers.photos.network" title="Developers">
+                    Developers
+                </a>
+            </div>
+            {% include "partials/social.html" %}
+        </div>
+    </div>
+</footer>
