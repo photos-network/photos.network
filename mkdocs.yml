@@ -34,6 +34,8 @@ nav:
       - 'Docker': 'installation/docker.md'
   - 'Documentation':
       - 'Configuration': 'documentation/index.md'
+  - 'Development': https://developers.photos.network
+
 
 # Theme
 theme:

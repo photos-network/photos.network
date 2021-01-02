@@ -15,4 +15,7 @@ Its core features are:
 !!!warning
     This application is in development and not available for endusers yet!
 
-![Placeholder](https://dummyimage.com/800x400/eee/aaa){: loading=lazy }
+
+    If you want to contribute the development: **[developers.photos.network](https://developers.photos.network/)**
+
+[comment]: <> (![Placeholder]&#40;https://dummyimage.com/800x400/eee/aaa&#41;{: loading=lazy })
