@@ -2,6 +2,7 @@ site_name: photos.network
 site_url: https://photos.network
 repo_url: https://github.com/photos-network
 repo_name: photos.network
+edit_uri: photos.network/edit/development/docs/
 site_description: "https://photos.network is an open source project for self hosted photo management."
 site_author: "Stürmer, Benjamin"
 copyright: 'Copyright &copy; 2020 <a href="https://photos.network">Photos network developers</a>'
@@ -18,7 +19,7 @@ extra:
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/r/thebino/photos
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/photos.network
+      link: https://twitter.com/photosnetwork
 
 markdown_extensions:
   - attr_list
@@ -28,14 +29,12 @@ strict: true
 
 # Navigation
 nav:
-  - 'Home': 'index.md'
-  - 'Installation':
-      - 'Standalone': 'installation/index.md'
-      - 'Docker': 'installation/docker.md'
-  - 'Documentation':
-      - 'Configuration': 'documentation/index.md'
-  - 'Development': https://developers.photos.network
-
+  - "Home": "index.md"
+  - "Installation":
+      - "Standalone": "installation/index.md"
+      - "Docker": "installation/docker.md"
+  - "Documentation":
+      - "Configuration": "documentation/index.md"
 
 # Theme
 theme:
