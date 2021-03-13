@@ -14,16 +14,27 @@ extra_javascript:
   - _js/extra.js
 
 extra:
-  version: 1.0
+  version: 1.0.0
   social:
     - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/thebino/photos
+      link: https://hub.docker.com/r/photosnetwork
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/photosnetwork
 
 markdown_extensions:
-  - attr_list
+  - pymdownx.highlight:
+      linenums: true
   - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - abbr
+  - footnotes
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 strict: true
 
@@ -31,10 +42,11 @@ strict: true
 nav:
   - "Home": "index.md"
   - "Installation":
-      - "Standalone": "installation/index.md"
       - "Docker": "installation/docker.md"
+      - "Standalone": "installation/index.md"
   - "Documentation":
       - "Configuration": "documentation/index.md"
+      - "Addons": "documentation/addons.md"
 
 # Theme
 theme:
