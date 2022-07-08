@@ -18,17 +18,31 @@ version: "3"
 
 services:
   core:
-    image: photosnetwork/core:0.0.1
+    image: photosnetwork/core:0.5.0
+    # expose container port to host system
     ports:
       - "7777:7777"
+
+    # expose port to linked service
+    expose: ["7777"]
+
     volumes:
-      - /share/Data/photos.network/data:/app/data:rw
-      - /share/Data/photos.network/config:/app/config:rw
+      - /share/photos.network/config:/app/config:rw
+      - /share/photos.network/data:/app/data:rw
 
   web:
-    image: photosnetwork/frontend:0.0.1
+    image: photosnetwork/frontend:0.2.0
+
+    # expose container port to host system
     ports:
-      - "8884:3000"
+      - "7778:7778"
+
+    # expose port to linked service
+    expose: ["7778"]
+
+    volumes:
+      - /share/photos.network/config:/app/config:rw
+      - /share/photos.network/data:/app/data:rw
 ```
 
 A [minimal configuration](/documentation/) file will be created on the first start.
