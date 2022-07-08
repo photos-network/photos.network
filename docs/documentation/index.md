@@ -16,6 +16,14 @@
       "redirect_uris": [
         "http://127.0.0.1:7778/callback"
       ]
+    },
+    {
+      "name": "Android App",
+      "client_id": "<random id>",
+      "client_secret": "<random secret>",
+      "redirect_uris": [
+        "photosapp://authenticate"
+      ]
     }
   ],
   "addons": [
