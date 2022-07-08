@@ -111,3 +111,17 @@ server {
 }
 
 ```
+
+Running the **frontend** and **core** behind a reverse proxy could look like this:
+
+```json
+{
+  "frontend_url": "https://photos.example.com",
+  "frontend_port": 7778,
+  "core_url": "https://photos.example.com",
+  "core_port": 443,
+  "client_id": "",
+  "client_secret": "",
+  "redirect_uri": "https://photos.example.com/callback"
+}
+```
