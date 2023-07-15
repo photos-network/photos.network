@@ -18,8 +18,8 @@ extra:
   social:
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/r/photosnetwork
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/photosnetwork
+    - icon: fontawesome/brands/mastodon
+      link: https://mastodon.cloud/@photos
 
 markdown_extensions:
   - pymdownx.highlight:

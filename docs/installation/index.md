@@ -11,7 +11,7 @@ This guide will help you to get Photos.network up and running in your local envi
 
 It is recommended to use at least the following hardware to get a smooth experience:
 
-- [Raspberry Pi 4](https://www.raspberrypi.org/products/)
+- [Raspberry Pi 2](https://www.raspberrypi.org/products/)
 
 ## Installation
 

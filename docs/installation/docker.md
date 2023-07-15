@@ -8,7 +8,7 @@ hide:
 This guide will help you to get Photos.network up and running in an docker environment.
 
 !!!warning
-    Early preview! This is an early preview of the core system and the frontend!
+    Early preview! This is an early preview of the core system!
 
 
 
@@ -18,27 +18,13 @@ version: "3"
 
 services:
   core:
-    image: photosnetwork/core:0.5.0
+    image: photosnetwork/core:0.5.2
     # expose container port to host system
     ports:
       - "7777:7777"
 
     # expose port to linked service
     expose: ["7777"]
-
-    volumes:
-      - /share/photos.network/config:/app/config:rw
-      - /share/photos.network/data:/app/data:rw
-
-  web:
-    image: photosnetwork/frontend:0.2.0
-
-    # expose container port to host system
-    ports:
-      - "7778:7778"
-
-    # expose port to linked service
-    expose: ["7778"]
 
     volumes:
       - /share/photos.network/config:/app/config:rw

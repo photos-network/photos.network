@@ -7,7 +7,6 @@
 {
   "internal_url": "192.168.0.1",
   "external_url": "photos.external.com",
-  "data_dir": "data",
   "clients": [
     {
       "name": "Frontend",
@@ -38,7 +37,6 @@
 | ------------------- | ------------------------------------ |
 | `internal_url`      | Indicates the internal network address. |
 | `external_url`      | The external network address e.g.: used to create links for sharing. |
-| `data_dir`          | Path where all the data will be stored. |
 | `clients`           | List of clients e.g. Web frontend or Android. |
 | `addons`            | List of addons and their custom configurations. |
 
@@ -47,26 +45,11 @@
 #### Minimal configuration
 ```json
 {
-  "frontend_url": "http://172.20.0.2",
-  "frontend_port": 7778,
-  "core_url": "http://127.0.0.1",
-  "core_port": 7777,
-  "client_id": "",
-  "client_secret": "",
-  "redirect_uri": "http://127.0.0.1:7778/callback"
+  "internal_url": "192.168.0.1",
+  "external_url": "photos.external.com",
+
 }
 ```
-
-| Properties          | Description                                   |
-| ------------------- | --------------------------------------------- |
-| `frontend_url`      | Indicates the internal network address.       |
-| `frontend_port`     | Indicates the internal network port.          |
-| `core_url`          | Communication address for the core system.    |
-| `core_port`         | Communication port for the core system.       |
-| `client_id`         | Client credentials to get access to the core. |
-| `client_secret`     | Client secret to get access to the core.      |
-| `redirect_uri`      | Redirect address for callbacks from the core. |
-
 
 ## Nginx
 
@@ -118,18 +101,4 @@ server {
   }
 }
 
-```
-
-Running the **frontend** and **core** behind a reverse proxy could look like this:
-
-```json
-{
-  "frontend_url": "https://photos.example.com",
-  "frontend_port": 7778,
-  "core_url": "https://photos.example.com",
-  "core_port": 443,
-  "client_id": "",
-  "client_secret": "",
-  "redirect_uri": "https://photos.example.com/callback"
-}
 ```
