@@ -1,0 +1,16 @@
+# Photos.network
+
+[![License](https://img.shields.io/github/license/photos-network/frontend)](./LICENSE.md)
+[![GitHub contributors](https://img.shields.io/github/contributors/photos-network/frontend?color=success)](https://github.com/photos.network/core/graphs/contributors)
+[![Discord](https://img.shields.io/discord/793235453871390720)](https://discord.gg/dGFDpmWp46)
+
+
+[Photos.network](https://photos.network) is a privacy first, self-hosted photo storage and sharing service.
+
+Its core features are:
+ - Share photos with friends, family or public
+ - Filter / Search photos by attributes like location or date
+ - Group photos by objects like people of objects
+
+## Photos.network
+This is the repository for the official Website.
