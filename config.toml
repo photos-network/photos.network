@@ -1,0 +1,111 @@
+# The URL the site will be built for
+base_url = "https://photos.network"
+
+title = "Photos.network"
+description = "The main website for Photos.network a self-hosted and open source photo management service."
+
+default_language = "en"
+
+output_dir = "docs"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+ignored_content = []
+
+generate_feed = true
+
+# The filename to use for the feed. Used as the template filename, too.
+# Defaults to "atom.xml", which has a built-in template that renders an Atom 1.0 feed.
+# There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
+feed_filename = "atom.xml"
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+
+[markdown]
+# Whether to do syntax highlighting
+highlight_code = true
+
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = true
+# Whether to include the path of the page/section in the index
+include_path = true
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+# At which character to truncate the content to. Useful if you have a lot of pages and the index would
+# become too big to load on the site. Defaults to not being set.
+truncate_content_length = 100
+
+
+
+[languages.de]
+build_search_index = true
+title = "Photos.network"
+
+[extra]
+enable_search = false
+enable_sidebar = true
+enable_adsense = false
+enable_multilingue = false
+enable_darkmode = false
+
+[extra.lang]
+items = [
+    { lang = "en", links = [
+        { base_url = "/", name = "English" },
+        { base_url = "/de", name = "German" },
+    ] },
+    { lang = "de", links = [
+        { base_url = "/", name = "Englisch" },
+        { base_url = "/de", name = "Deutsch" },
+    ] },
+]
+
+[extra.navbar]
+items = [
+    { lang = "en", links = [
+        { url = "/", name = "Home" },
+        #{ url = "/installation", name = "Installation" },
+        #{ url = "/documentation", name = "Documentation" },
+    ] },
+    { lang = "de", links = [
+        { url = "/de", name = "Start" },
+        #{ url = "/de/installation", name = "Installation" },
+        #{ url = "/de/documentation", name = "Dokumentation" },
+    ]}
+]
+
+[extra.sidebar]
+items = []
+
+# Index page
+[extra.index]
+title = "Photos.network"
+image = "logo.png"
+image_alt = "Logo of the Photos.network project."
+
+[extra.default_author]
+name = "Stürmer, Benjamin"
+
+[extra.social]
+github = "https://github.com/photos-network"
+twitter = "https://twitter.com/photosnetwork"
+email = "info@photos.network"
+linkedin = ""
+stackoverflow = ""
+telegram = ""
+
+[extra.favicon]
+favicon = "/icons/favicon.ico"
+favicon_16x16 = "/icons/favicon-16x16.png"
+favicon_32x32 = "/icons/favicon-32x32.png"
+apple_touch_icon = "/icons/apple-touch-icon.png"
+android_chrome_512 = "/icons/android-icon-310x310.png"
+android_chrome_192 = "/icons/android-icon-192x192.png"
+manifest = "/icons/site.webmanifest"
