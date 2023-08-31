@@ -13,4 +13,5 @@ Its core features are:
  - Group photos by objects like people of objects
 
 ## Photos.network
-This is the repository for the official Website.
+This is the repository for the official Website on [www.photos.network](https://photos.network).
+
