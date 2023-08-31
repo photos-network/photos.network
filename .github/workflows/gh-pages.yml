@@ -1,11 +1,12 @@
-name: build and deploy github pages
+name: build and deploy with zola
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - development
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
