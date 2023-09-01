@@ -1,0 +1,501 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>
+    
+    Photos.network
+    
+  </title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+
+  <!-- FAVICON -->
+  
+  
+    <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+    <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+    <link href='&#x2F;icons&#x2F;android-icon-310x310.png' rel="android-chrome" sizes="512x512" />
+  
+  
+    <link href='&#x2F;icons&#x2F;android-icon-192x192.png' rel="android-chrome" sizes="192x192" />
+  
+  
+    <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+  
+    <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+
+
+  <script type="text/javascript" src="https://photos.network/js/jquery-3.6.4.min.js"></script>
+
+  </head>
+  <body class="dark:bg-slate-500 flex flex-col justify-between">
+
+<!-- ######### Navigation ######### -->
+<nav id="navbar" class="bg-blue-300 dark:bg-gray-800">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="relative flex items-center justify-between h-16">
+
+      <!-- Mobile menu button-->
+<!-- 
+
+      <div class="flex items-center sm:hidden">
+        <button id="toggle-mobile-menu" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+-->
+          <!--
+            Icon when menu is closed.
+            Heroicon name: outline/menu
+            Menu open: "hidden", Menu closed: "block"
+          -->
+<!--          
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+-->
+          <!--
+            Icon when menu is open.
+            Heroicon name: outline/x
+            Menu open: "block", Menu closed: "hidden"
+          -->
+          <!--<svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+-->
+
+      <!-- Menu -->
+      <div class="flex-1 flex items-center">
+        <div class="flex-shrink-0 flex items-center ml-2">
+
+          <div class="flex lg:flex-1">
+            <a href="/" class="-m-1.5 p-1.5">
+              <span class="sr-only">Photos.network</span>
+              <img class="h-8 w-auto" src="https://photos.network/logo.png" alt="">
+            </a>
+          </div>
+
+          <a href="/" class="text-xl text-gray-800 dark:text-white m-3">Photos.network</a>
+        </div>
+
+        <!-- Links -->
+        <div class="hidden sm:block sm:ml-6">
+          <div class="nav-links flex space-x-4">
+            
+              
+                
+                  <a href="&#x2F;" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                
+              
+            
+              
+            
+          </div>
+        </div>
+
+        
+
+      <!---------------------------- Sidebar Menu ---------------------------->
+      
+        <div id="sidebar" class="nav-links -translate-x-full flex flex-col pt-6 p-2 text-2xl text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-900 transform top-0 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30 shadow-2xl">
+          
+        </div>
+      
+
+
+      
+
+      
+    </div>
+  </div>
+
+  <!----------------------------- Mobile menu ----------------------------->
+  <div id="mobile-menu" class="sm:hidden fixed z-10 overflow-hidden">
+    <div class="nav-links flex flex-col space-y-4 items-center w-screen dark:bg-gray-800 transition-all ease-out duration-500 h-0">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      
+        
+          
+            <a href="&#x2F;" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+          
+        
+      
+        
+      
+
+      
+          
+      
+    </div>
+  </div>
+</nav>
+
+<!-- ######### Content ######### -->
+
+
+<!-- Gradient -->
+<div class="bg-gradient-to-b from-blue-300 to-transparent to-30%">
+
+  <!-- Hero -->
+  <div class="relative isolate px-6 pt-14 lg:px-8">
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <div class="mx-auto max-w-5xl py-32 sm:py-28 lg:py-40">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Self-hosted photo sharing</h1>
+        <p class="mt-6 text-lg leading-8 text-gray-600">Photos.network is a self-hosted, privacy first and extensible photo storage and sharing service.</p>
+        <p class="text-lg leading-8 text-gray-600">Instead of relaying on big companies, keep full control of all access rights.</p>
+      </div>
+    </div>
+    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+      <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+  </div>
+
+  <!-- Main Features -->
+  <section class="text-gray-600 body-font overflow-hidden">
+    <div class="container px-5 py-5 mx-auto">
+      <div class="text-center mb-20">
+        <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">Find photos and videos</h1>
+        <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">When searching for photos and videos from the past, there are <b>3</b> major factors.</p>
+      </div>
+
+      <!-- Location -->
+      <div class="lg:w-4/5 m-10 mx-auto flex flex-wrap">
+        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x200">
+        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Taken at a specific location</h1>
+
+          <p class="leading-relaxed">People wanna share photos and videos from a vacation trip, a weekend travel or from any place they visited. They remember the approximate or even the precise position. Searching on a map or by entering locations like countries, cities or even geo positions will help users to find their searched photos easily.</p>
+        </div>
+      </div>
+
+      <!-- Objects -->
+      <div class="lg:w-4/5 m-20 mx-auto flex flex-wrap-reverse">
+        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Containing people or objects</h1>
+
+          <p class="leading-relaxed">Remembering other people or objects beeing present when the photo or video was taken. Users can label and group items by faces and objects, this could also be done by ML, AI or just simple algorithms.</p>
+        </div>
+        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x200">
+      </div>
+
+      <!-- timeline -->
+      <div class="lg:w-4/5 m-20 mx-auto flex flex-wrap">
+        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x200">
+        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Browse through time</h1>
+
+          <p class="leading-relaxed">Sometimes people are just looking for a photo taken during a specific period of time, like a season or an annual event. All items will contain the date they are taken and when they have been added to the system. Most cameras nowadays add so called EXIF data into all images.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-5 mx-auto flex flex-wrap">
+      <!-- Progress -->
+      <div class="lg:w-1/2 pb-5 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+        <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Roadmap</h1>
+        <p class="leading-relaxed">What is the current roadmap of the project.</p>
+      </div>
+
+      <!-- Proof-of-concept -->
+      <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+        <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+          <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+        </div>
+        <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-blue-500 text-white relative z-10 title-font font-medium text-sm">✓</div>
+        <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-24 h-24 bg-blue-100 text-blue-500 rounded-full inline-flex items-center justify-center">
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <svg fill="fill" stroke="currentColor" class="w-12 h-12" viewBox="0 0 640 512">
+              <path d="M9.4 9.4C21.9-3.1 42.1-3.1 54.6 9.4L160 114.7V96c0-17.7 14.3-32 32-32s32 14.3 32 32v96c0 4.3-.9 8.5-2.4 12.2c-1.6 3.7-3.8 7.3-6.9 10.3l-.1 .1c-3.1 3-6.6 5.3-10.3 6.9c-3.8 1.6-7.9 2.4-12.2 2.4H96c-17.7 0-32-14.3-32-32s14.3-32 32-32h18.7L9.4 54.6C-3.1 42.1-3.1 21.9 9.4 9.4zM256 256a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM114.7 352H96c-17.7 0-32-14.3-32-32s14.3-32 32-32h96 0l.1 0c8.8 0 16.7 3.6 22.5 9.3l.1 .1c3 3.1 5.3 6.6 6.9 10.3c1.6 3.8 2.4 7.9 2.4 12.2v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V397.3L54.6 502.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L114.7 352zM416 96c0-17.7 14.3-32 32-32s32 14.3 32 32v18.7L585.4 9.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L525.3 160H544c17.7 0 32 14.3 32 32s-14.3 32-32 32H448c-8.8 0-16.8-3.6-22.6-9.3l-.1-.1c-3-3.1-5.3-6.6-6.9-10.3s-2.4-7.8-2.4-12.2l0-.1v0V96zM525.3 352L630.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L480 397.3V416c0 17.7-14.3 32-32 32s-32-14.3-32-32V320v0c0 0 0-.1 0-.1c0-4.3 .9-8.4 2.4-12.2c1.6-3.8 3.9-7.3 6.9-10.4c5.8-5.8 13.7-9.3 22.5-9.4c0 0 .1 0 .1 0h0 96c17.7 0 32 14.3 32 32s-14.3 32-32 32H525.3z"></path>
+            </svg>
+          </div>
+          <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Proof of concept</h2>
+            <p class="leading-relaxed">In the PoC the idea was put to test on real scenarious.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MVP -->
+      <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+        <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+          <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+        </div>
+        <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-blue-500 text-white relative z-10 title-font font-medium text-sm">✓</div>
+        <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-24 h-24 bg-blue-100 text-blue-500 rounded-full inline-flex items-center justify-center">
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <svg fill="fill" stroke="currentColor" class="w-12 h-12" viewBox="0 0 512 512">
+              <path d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0h32c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64H64c123.7 0 224 100.3 224 224v32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V320C100.3 320 0 219.7 0 96z"></path>
+            </svg>
+          </div>
+          <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">MvP</h2>
+            <p class="leading-relaxed">The Minimum viable product contains just the base features to create media items, attach photos and videos to it and browse owned items.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- share internal -->
+      <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+        <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+          <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+        </div>
+        <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-blue-500 text-white relative z-10 title-font font-medium text-sm">&nbsp;</div>
+        <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-24 h-24 bg-blue-100 text-blue-500 rounded-full inline-flex items-center justify-center">
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <svg fill="fill" stroke="currentColor" class="w-12 h-12" viewBox="0 0 640 512">
+              <path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"></path>
+            </svg>
+          </div>
+          <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Sharing internal</h2>
+            <p class="leading-relaxed">Sharing albums with other accounts on the same instance.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- share publicly -->
+      <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+        <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+          <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+        </div>
+        <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-blue-500 text-white relative z-10 title-font font-medium text-sm">&nbsp;</div>
+        <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-24 h-24 bg-blue-100 text-blue-500 rounded-full inline-flex items-center justify-center">
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <svg fill="fill" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 512 512">
+              <circle cx="12" cy="5" r="3"></circle>
+              <path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"></path>
+            </svg>
+          </div>
+          <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Sharing publicly</h2>
+            <p class="leading-relaxed">Click on a link and browse through a shared album without the need of an account.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ML -->
+      <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+        <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+          <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+        </div>
+        <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-blue-500 text-white relative z-10 title-font font-medium text-sm">&nbsp;</div>
+        <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-24 h-24 bg-blue-100 text-blue-500 rounded-full inline-flex items-center justify-center">
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <svg fill="fill" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 512 512">
+              <path d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Reinforcement learning</h2>
+            <p class="leading-relaxed">Group and categorize photos and videos based on previous user labels to get better results.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section id="faqs" aria-labelledby="faqs-title" class="border-t border-gray-300 py-10 sm:py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 id="faqs-title" class="text-3xl font-medium tracking-tight text-gray-900">Frequently asked questions</h2>
+        <p class="mt-2 text-lg text-gray-600">If you have anything else you want to ask, <a href="mailto:info@photos.network" class="text-gray-900 underline">reach out to us</a>.</p>
+      </div>
+      <ul role="list" class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:max-w-none lg:grid-cols-3">
+        <li>
+          <ul role="list" class="space-y-10">
+            <!-- Hype -->
+            <li>
+              <h3 class="text-lg font-semibold leading-6 text-gray-900">Where comes the hype from?</h3>
+              <p class="mt-4 text-sm text-gray-700">With the enforcement of GDPR in May 2018 an increased interested in data privacy arrised. Also the aquiring and discontinuing of the famous image organizer Picassa left a lot of users behind.</p>
+            </li>
+
+          </ul>
+        </li>
+        <li>
+          <ul role="list" class="space-y-10">
+            
+            <!-- Another app -->
+            <li>
+              <h3 class="text-lg font-semibold leading-6 text-gray-900">Why another photo management application?</h3><p class="mt-4 text-sm text-gray-700">The list of photo and video gallery projects out there is amazing. Testing most of them ended in at least one of few complains:</p>
+              
+              <ul class="list-inside list-disc text-gray-400">
+                <li>sluggish performance</li>
+                <li>hard installation and setup</li>
+                <li>not working with an existing folder structure</li>
+                <li>supporting multiple TB of photos and videos</li>
+                <li>process RAW files</li>
+                <li>lack of control</li>
+                <li>data privacy</li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+        <li>
+          <ul role="list" class="space-y-10">
+            
+            <!-- Contribute -->
+            <li>
+              <h3 class="text-lg font-semibold leading-6 text-gray-900">Why not use or contribute to one of the big players?</h3>
+              <p class="mt-4 text-sm text-gray-700">Here’s the thing: you’re the one doing the insider trading, not us. We’re just giving you the tips and  some tools to make trades. We’re not doing anything wrong here.</p> 
+              <ul class="list-inside list-disc text-gray-400">
+                <li><b>Plex</b> is great for browsing and viewing photos, but it doesn't offer an API for 3rd party clients.</li>
+                <li><b>Nextcloud</b> can't work with RAW files nor with existing folder structures</li>
+                <li><b>Ownphotos</b> not maintained anymore</li>
+                <li><b>LibrePhotos</b> (Ownphotos fork) lacks of extensibility</li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- Architecture -->
+  <section class="text-gray-600 border-t border-gray-300 body-font">
+    <div class="container mx-auto flex px-10 py-14 items-center justify-center flex-col">
+      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/920x600">
+      <div class="text-center lg:w-2/3 w-full">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Architecture concept</h1>
+        <p class="mb-8 leading-relaxed">Instead of just saving photos and videos itself, nowadays people care about enhanced information. So every item contains one or multiple references.</p>
+        <p class="mb-8 leading-relaxed">This could be the RAW and a JPG from your mobile phone, or the mosaic of photos when generating a stiched panorama. Even modern image processing applications do not touch the original photo, all editings are stored in an XMP File (Extensible Metadata Platform file).</p>
+        <p class="mb-8 leading-relaxed">With this concept, users are able to display and download specific <b>references</b> from their saved items.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contribution -->
+  <section class="text-gray-600 body-font border-t border-gray-200 ">
+    <div class="container px-10 py-14 mx-auto max-w-7xl flex flex-wrap ">
+      <h2 class="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5">Contribution</h2>
+      <div class="md:w-3/5 md:pl-6">
+        <p class="leading-relaxed text-base">This is a FOSS (free and open-source software) and lives from contributions of the community. There are many ways to contribute, even speak about it and Spread the project or its apps to the world will help.</p>
+        <div class="flex md:mt-4 mt-6">
+          <button onclick="window.location.href='https://github.com/photos-network/';" class="inline-flex text-white bg-blue-500 border-0 py-1 px-4 focus:outline-none hover:bg-blue-600 rounded">Browse the code</button>
+          <a href="https://developers.photos.network/" target="_blank" class="text-blue-500 inline-flex items-center ml-4">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+ 
+<!-- ######### Footer ######### -->
+<footer class="bg-gray-100 text-gray-600 body-font">
+  <div class="container px-5 pt-5 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    
+    <div class="w-1/2 flex-shrink-0 my-auto md:mx-0 mx-auto text-center md:text-left">
+      <a href="/" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        
+        <!-- Logo -->
+        <img class="h-8 w-auto" src="https://photos.network/logo.png" alt="">
+        <span class="m-2">Photos.network</span>
+      </a>
+    </div>
+
+    <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+      <div class="lg:w-1/2 md:w-1/2 w-full px-4">
+        <nav class="list-none mb-10">
+          <li>
+            <a href="mailto:info@photos.network" title="Contact" class="text-gray-600 hover:text-gray-800">Contact (No support!) </a>
+          </li>
+          <li>
+            <a href="https://photos.network/security" title="Security Vulnerabilities" class="text-gray-600 hover:text-gray-800">Security Vulnerabilities</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/2 md:w-1/2 w-full px-4">
+        <nav class="list-none mb-10">
+          <li>
+            <a href="https://photos.network/privacy" title="Privacy" class="text-gray-600 hover:text-gray-800">Privacy</a>
+          </li>
+          <li>
+            <a href="https://developers.photos.network" title="Developers" class="text-gray-600 hover:text-gray-800">Developers</a>
+          </li>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gray-100">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Photos network developers</p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        
+        <!-- Mastodon -->
+        <a href="https://mastodon.cloud/@photos" class="ml-3 text-gray-500">
+          <svg fill="currentColor" height="20" width="20" viewBox="0 0 448 512">
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/>
+          </svg>
+        </a>
+
+        <!-- Github -->
+        <a href="https://github.com/photos-network" class="ml-3 text-gray-500">
+          <svg fill="currentColor" height="20" height="1em" viewBox="0 0 496 512">
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+        </a>
+
+        <!-- Docker -->
+        <a href="https://hub.docker.com/r/photosnetwork" class="ml-3 text-gray-500">
+          <svg fill="currentColor" height="20" viewBox="0 0 640 512">
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+        </a>
+
+        <!-- Twitter -->
+        <a href="https://twitter.com/photosnetwork" class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+
+      </span>
+    </div>
+  </div>
+</footer>
+
+  <!-- ######### SEARCH ######### -->
+  <script defer src="/js/main.js"></script>
+  
+
+  <!-- ######### LANGUAGE ######### -->
+  
+
+  <!-- ######### EXTRA JAVASCRIPTS ######### -->
+  
+  
+  </body>
+</html>
+

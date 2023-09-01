@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Photos.network</title>
+    <subtitle>The main website for Photos.network a self-hosted and open source photo management service.</subtitle>
+    <link href="https://photos.network/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://photos.network"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2020-12-28T00:00:00+00:00</updated>
+    <id>https://photos.network/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Configuration</title>
+        <published>2020-12-28T00:00:00+00:00</published>
+        <updated>2020-12-28T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://photos.network/documentation/" type="text/html"/>
+        <id>https://photos.network/documentation/</id>
+        
+        <content type="html">&lt;h2 id=&quot;minimal-configuration&quot;&gt;Minimal configuration&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;json&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-json &quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;internal_url&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;192.168.0.1&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;external_url&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;photos.external.com&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;clients&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: [
+&lt;&#x2F;span&gt;&lt;span&gt;    {
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Frontend&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;client_id&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;lt;random id&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;client_secret&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;lt;random secret&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;redirect_uris&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: [
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;http:&#x2F;&#x2F;127.0.0.1:7778&#x2F;callback&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;      ]
+&lt;&#x2F;span&gt;&lt;span&gt;    },
+&lt;&#x2F;span&gt;&lt;span&gt;    {
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Android App&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;client_id&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;lt;random id&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;client_secret&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;lt;random secret&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;redirect_uris&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: [
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;photosapp:&#x2F;&#x2F;authenticate&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;      ]
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  ],
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;addons&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: [
+&lt;&#x2F;span&gt;&lt;span&gt;    {
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;api&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  ]
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Properties&lt;&#x2F;th&gt;&lt;th&gt;Description&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;internal_url&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;Indicates the internal network address.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;external_url&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;The external network address e.g.: used to create links for sharing.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;clients&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;List of clients e.g. Web frontend or Android.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;addons&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;List of addons and their custom configurations.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;nginx&quot;&gt;Nginx&lt;&#x2F;h2&gt;
+&lt;p&gt;It is recommended to run &lt;strong&gt;photos.network&lt;&#x2F;strong&gt; behind a reverse proxy like nginx or HAProxy.
+First of all, it increases the performance and it prevents from many attacks based on malformed http requests.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;nginx-round-robin&quot;&gt;Nginx + Round-robin&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;conf&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-conf &quot;&gt;&lt;code class=&quot;language-conf&quot; data-lang=&quot;conf&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;upstream &lt;&#x2F;span&gt;&lt;span&gt;core {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;server &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;127.0.0.1:7777&lt;&#x2F;span&gt;&lt;span&gt; fail_timeout=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;upstream &lt;&#x2F;span&gt;&lt;span&gt;frontend {
+&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;server &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;127.0.0.1:7778&lt;&#x2F;span&gt;&lt;span&gt; fail_timeout=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; 
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;server &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;listen &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;80&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;301              https:&#x2F;&#x2F;$host$request_uri&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;server &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;listen                  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;443&lt;&#x2F;span&gt;&lt;span&gt; ssl http2;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;listen                  &lt;&#x2F;span&gt;&lt;span&gt;[::]:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;443&lt;&#x2F;span&gt;&lt;span&gt; ssl http2;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;client_max_body_size    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4G&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;server_name             &lt;&#x2F;span&gt;&lt;span&gt;photos.example.com;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ssl_certificate         &lt;&#x2F;span&gt;&lt;span&gt;&#x2F;etc&#x2F;secrets&#x2F;cert.pem;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ssl_certificate_key     &lt;&#x2F;span&gt;&lt;span&gt;&#x2F;etc&#x2F;secrets&#x2F;key.pem;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;  location &lt;&#x2F;span&gt;&lt;span&gt;&#x2F; {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;proxy_set_header      &lt;&#x2F;span&gt;&lt;span&gt;Host &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;$http_host&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;proxy_set_header      &lt;&#x2F;span&gt;&lt;span&gt;X-Forwarded-For &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;$proxy_add_x_forwarded_for&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;proxy_set_header      &lt;&#x2F;span&gt;&lt;span&gt;X-Forwarded-Proto &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;$scheme&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;proxy_set_header      &lt;&#x2F;span&gt;&lt;span&gt;X-Real-IP &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;$remote_addr&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;proxy_redirect        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;off&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;proxy_buffering       &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;off&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;proxy_pass            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;http:&#x2F;&#x2F;frontend&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;  location &lt;&#x2F;span&gt;&lt;span&gt;&#x2F;api {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;proxy_pass            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;http:&#x2F;&#x2F;core&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;  location &lt;&#x2F;span&gt;&lt;span&gt;&#x2F;oauth {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;proxy_pass            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;http:&#x2F;&#x2F;core&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Privacy</title>
+        <published>2020-12-28T00:00:00+00:00</published>
+        <updated>2020-12-28T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://photos.network/privacy/" type="text/html"/>
+        <id>https://photos.network/privacy/</id>
+        
+        <content type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;photos.network&quot;&gt;Photos.network&lt;&#x2F;a&gt; is focusing on privacy and will not track any user data.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Security</title>
+        <published>2020-12-28T00:00:00+00:00</published>
+        <updated>2020-12-28T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://photos.network/security/" type="text/html"/>
+        <id>https://photos.network/security/</id>
+        
+        <content type="html">&lt;p&gt;If you think that you have found a security vulnerability in Photos.network, please disclose it to us via our security e-mail address at &lt;a href=&quot;mailto:security@photos.network&quot;&gt;security@photos.network&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Please do not make vulnerabilities public without notifying us and giving us at least 2 weeks to respond.&lt;&#x2F;p&gt;
+&lt;p&gt;If you are going to write about Photos.network’s security, please get in touch, so we can make sure that all claims are correct.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
