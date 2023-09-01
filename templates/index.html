@@ -35,7 +35,7 @@
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Taken at a specific location</h1>
 
-          <p class="leading-relaxed">People wanna share photos and videos from a vacation trip, a weekend travel or from any place they visited. They remember the approximate or even the precise position. Searching on a map or by entering locations like countries, cities or even geo positions will help users.</p>
+          <p class="leading-relaxed">People wanna share photos and videos from a vacation trip, a weekend travel or from any place they visited. They remember the approximate or even the precise position. Searching on a map or by entering locations like countries, cities or even geo positions will help users to find their searched photos easily.</p>
         </div>
       </div>
 
@@ -44,7 +44,7 @@
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Containing people or objects</h1>
 
-          <p class="leading-relaxed">Remembering other people or objects beeing present when the photo or video was taken. Label and group items by faces</p>
+          <p class="leading-relaxed">Remembering other people or objects beeing present when the photo or video was taken. Users can label and group items by faces and objects, this could also be done by ML, AI or just simple algorithms.</p>
         </div>
         <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x200">
       </div>
@@ -55,7 +55,7 @@
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Browse through time</h1>
 
-          <p class="leading-relaxed">Sometimes people are just looking for a photo taken during a range of time, like a season or an annual event. All items will be tagged by the date they are taken and when added to the system.</p>
+          <p class="leading-relaxed">Sometimes people are just looking for a photo taken during a specific period of time, like a season or an annual event. All items will contain the date they are taken and when they have been added to the system. Most cameras nowadays add so called EXIF data into all images.</p>
         </div>
       </div>
     </div>
@@ -176,7 +176,7 @@
 
 
   <!-- FAQ -->
-  <section id="faqs" aria-labelledby="faqs-title" class="border-t border-gray-200 py-10 sm:py-10">
+  <section id="faqs" aria-labelledby="faqs-title" class="border-t border-gray-300 py-10 sm:py-10">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:mx-0">
         <h2 id="faqs-title" class="text-3xl font-medium tracking-tight text-gray-900">Frequently asked questions</h2>
@@ -235,6 +235,37 @@
   </section>
 
 
+  <!-- Architecture -->
+  <section class="text-gray-600 border-t border-gray-300 body-font">
+    <div class="container mx-auto flex px-10 py-14 items-center justify-center flex-col">
+      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/920x600">
+      <div class="text-center lg:w-2/3 w-full">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Architecture concept</h1>
+        <p class="mb-8 leading-relaxed">Instead of just saving photos and videos itself, nowadays people care about enhanced information. So every item contains one or multiple references.</p>
+        <p class="mb-8 leading-relaxed">This could be the RAW and a JPG from your mobile phone, or the mosaic of photos when generating a stiched panorama. Even modern image processing applications do not touch the original photo, all editings are stored in an XMP File (Extensible Metadata Platform file).</p>
+        <p class="mb-8 leading-relaxed">With this concept, users are able to display and download specific <b>references</b> from their saved items.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contribution -->
+  <section class="text-gray-600 body-font border-t border-gray-200 ">
+    <div class="container px-10 py-14 mx-auto max-w-7xl flex flex-wrap ">
+      <h2 class="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5">Contribution</h2>
+      <div class="md:w-3/5 md:pl-6">
+        <p class="leading-relaxed text-base">This is a FOSS (free and open-source software) and lives from contributions of the community. There are many ways to contribute, even speak about it and Spread the project or its apps to the world will help.</p>
+        <div class="flex md:mt-4 mt-6">
+          <button onclick="window.location.href='https://github.com/photos-network/';" class="inline-flex text-white bg-blue-500 border-0 py-1 px-4 focus:outline-none hover:bg-blue-600 rounded">Browse the code</button>
+          <a href="https://developers.photos.network/" target="_blank" class="text-blue-500 inline-flex items-center ml-4">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </div>
 {% endblock content %}
