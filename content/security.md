@@ -1,7 +1,6 @@
 +++
 title = "Security"
 description = "How to handle found security vulnerabilities"
-date = 2020-12-28
 +++
 
 If you think that you have found a security vulnerability in Photos.network, please disclose it to us via our security e-mail address at [security@photos.network](mailto:security@photos.network).

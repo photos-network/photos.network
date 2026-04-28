@@ -3,44 +3,57 @@ base_url = "https://photos.network"
 
 title = "Photos.network"
 description = "The main website for Photos.network a self-hosted and open source photo management service."
-
-default_language = "en"
-
-output_dir = "docs"
+author = "Stürmer, Benjamin"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
-ignored_content = []
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
 
-generate_feed = true
+# https://www.getzola.org/themes/zola-theme-terminimal/
+# theme = "terminimal"
+
+# taxonomies = [{ name = "tags" }]
+
+# When set to "true", a feed is automatically generated.
+generate_feeds = false
+
+[markdown]
+# Whether to do syntax highlighting
+# highlight_code = true
+
+
+
+
+# default_language = "en"
+
+# output_dir = "docs"
+
+# ignored_content = []
+
 
 # The filename to use for the feed. Used as the template filename, too.
 # Defaults to "atom.xml", which has a built-in template that renders an Atom 1.0 feed.
 # There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
-feed_filename = "atom.xml"
-
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+# feed_filename = "atom.xml"
 
 
-[markdown]
-# Whether to do syntax highlighting
-highlight_code = true
 
 
-[search]
+
+# [search]
 # Whether to include the title of the page/section in the index
-include_title = true
+# include_title = true
 # Whether to include the description of the page/section in the index
-include_description = true
+# include_description = true
 # Whether to include the path of the page/section in the index
-include_path = true
+# include_path = true
 # Whether to include the rendered content of the page/section in the index
-include_content = true
+# include_content = true
 # At which character to truncate the content to. Useful if you have a lot of pages and the index would
 # become too big to load on the site. Defaults to not being set.
-truncate_content_length = 100
+# truncate_content_length = 100
 
 
 

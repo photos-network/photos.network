@@ -31,7 +31,7 @@
 
       <!-- Access codes -->
       <div class="lg:w-4/5 m-10 mx-auto flex flex-wrap">
-        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x200">
+        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{ config.base_url | safe }}/feature_easy_access.png">
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Easy access</h1>
 
@@ -46,12 +46,12 @@
 
           <p class="leading-relaxed">Grant other contributors to add media items, invite more people with access codes or make them own an album for full control.</p>
         </div>
-        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x200">
+        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{ config.base_url | safe }}/feature_access_management.png">
       </div>
 
-      <!-- Download -->
+      <!-- Downloads -->
       <div class="lg:w-4/5 m-20 mx-auto flex flex-wrap">
-        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x200">
+        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{ config.base_url | safe }}/feature_downloads.png">
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Download</h1>
 
@@ -161,7 +161,7 @@
         <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
           <div class="flex-shrink-0 w-24 h-24 bg-blue-100 text-blue-500 rounded-full inline-flex items-center justify-center">
             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-            <svg fill="fill" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 512 512">
+            <svg fill="fill" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 640 640">
               <circle cx="12" cy="5" r="3"></circle>
               <path d="M320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z"/>
             </svg>
@@ -217,47 +217,6 @@
     </div>
   </section>
 
-
-
-  <!-- Main Features -->
-  <section class="text-gray-600 body-font overflow-hidden">
-    <div class="container px-5 py-5 mx-auto">
-      <div class="text-center mb-20">
-        <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">Find photos and videos</h1>
-        <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">When searching for photos and videos from the past, there are <b>3</b> major factors.</p>
-      </div>
-
-      <!-- Location -->
-      <div class="lg:w-4/5 m-10 mx-auto flex flex-wrap">
-        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x200">
-        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Taken at a specific location</h1>
-
-          <p class="leading-relaxed">People wanna share photos and videos from a vacation trip, a weekend travel or from any place they visited. They remember the approximate or even the precise position. Searching on a map or by entering locations like countries, cities or even geo positions will help users to find their searched photos easily.</p>
-        </div>
-      </div>
-
-      <!-- Objects -->
-      <div class="lg:w-4/5 m-20 mx-auto flex flex-wrap-reverse">
-        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Containing people or objects</h1>
-
-          <p class="leading-relaxed">Remembering other people or objects beeing present when the photo or video was taken. Users can label and group items by faces and objects, this could also be done by ML, AI or just simple algorithms.</p>
-        </div>
-        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x200">
-      </div>
-
-      <!-- timeline -->
-      <div class="lg:w-4/5 m-20 mx-auto flex flex-wrap">
-        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x200">
-        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Browse through time</h1>
-
-          <p class="leading-relaxed">Sometimes people are just looking for a photo taken during a specific period of time, like a season or an annual event. All items will contain the date they are taken and when they have been added to the system. Most cameras nowadays add so called EXIF data into all images.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
 
 
@@ -324,7 +283,7 @@
   <!-- Architecture -->
   <section class="text-gray-600 border-t border-gray-300 body-font">
     <div class="container mx-auto flex px-10 py-14 items-center justify-center flex-col">
-      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/920x600">
+      <!-- <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/920x600"> -->
       <div class="text-center lg:w-2/3 w-full">
         <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Architecture concept</h1>
         <p class="mb-8 leading-relaxed">Instead of just saving photos and videos itself, nowadays people care about enhanced information. So every item contains one or multiple references.</p>

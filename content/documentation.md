@@ -1,7 +1,6 @@
 +++
 title = "Configuration"
 description = "This is fun"
-date = 2020-12-28
 +++
 
 ## Minimal configuration
